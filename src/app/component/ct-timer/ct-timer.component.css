@@ -1,0 +1,11 @@
+.CT-Timer mat-label{
+    font-size:18px !important;
+  }
+  
+.CT-Timer mat-form-field{
+    width: 355px
+  }
+
+.CT-Timer .h1{
+    font-size: 15px
+  }

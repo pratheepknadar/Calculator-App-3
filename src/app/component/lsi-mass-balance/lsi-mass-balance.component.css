@@ -1,0 +1,7 @@
+.inputdata mat-label{
+    font-size:18px !important;
+  }
+  
+  .inputdata mat-form-field{
+    width: 355px
+  }

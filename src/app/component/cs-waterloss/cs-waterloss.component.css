@@ -1,0 +1,11 @@
+.CSWL mat-label{
+  font-size:18px !important;
+}
+
+.CSWL mat-form-field{
+  width: 355px
+}
+
+.CSWL .h1{
+  font-size: 15px
+}

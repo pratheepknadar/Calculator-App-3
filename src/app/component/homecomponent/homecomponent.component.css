@@ -1,0 +1,17 @@
+.new button{
+    width: 320px;
+    height: 60px;
+    
+}
+
+.new{
+    font-size: 20px;
+}
+
+.new .h1{
+    margin:1 1 auto;
+}
+.new .mat-raised-button{
+    background-color: #3276b4;
+
+}

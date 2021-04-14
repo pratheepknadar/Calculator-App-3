@@ -1,0 +1,11 @@
+.center {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .example-container {
+    width: 250px;
+    height: 1000px;
+    margin: 10px;
+    border: 1px solid #555;
+  }

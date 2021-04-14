@@ -1,0 +1,11 @@
+.CT-bleedfeed mat-label{
+    font-size:18px !important;
+  }
+  
+.CT-bleedfeed mat-form-field{
+    width: 355px
+  }
+
+.CT-bleedfeed.h1{
+    font-size: 15px
+  }

@@ -1,0 +1,95 @@
+<div class= "inputdata">
+<h3><b>ct-mass-balance</b> </h3>
+<h4>System Data</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Cooling System Type</mat-label>
+      <mat-select [(ngModel)]="CST" (selectionChange)="FUN1()">
+        <mat-option *ngFor = "let item of SystemsList" [value]="item.SystemType">{{item.SystemType}}</mat-option>
+        </mat-select>
+    </mat-form-field><br/>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{sType}}   </mat-label>
+    <input matInput type="number" [(ngModel)]="RR" (change)="FUN1()" >
+  </mat-form-field> 
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{LFactor}}   </mat-label>
+    <input matInput type="number" [(ngModel)]="ADT" (change)="FUN1()" >
+  </mat-form-field> 
+
+  <mat-form-field appearance="fill">
+    <mat-label>Hours per Day Operation    </mat-label>
+    <input matInput type="number" [(ngModel)]="HPD" (change)="FUN1()" >
+  </mat-form-field> 
+
+  <mat-form-field appearance="fill">
+    <mat-label>Days per Week Operation    </mat-label>
+    <input matInput type="number" [(ngModel)]="DPWO" (change)="FUN1()" >
+  </mat-form-field> 
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Weeks per Year Operation    </mat-label>
+    <input matInput type="number" [(ngModel)]="WPYO" (change)="FUN1()" >
+  </mat-form-field>   
+  <mat-form-field appearance="fill">
+    <mat-label>System Volume(Gal)  </mat-label>
+    <input matInput type="number" [(ngModel)]="SVG" (change)="FUN1()" >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Water  Cost ($/1000 Gal)    </mat-label>
+    <input matInput type="number" [(ngModel)]="WCD" (change)="FUN1()" >
+  </mat-form-field>   
+  <mat-form-field appearance="fill">
+    <mat-label>Sewer Cost ($/1000 Gal)</mat-label>
+    <input matInput type="number" [(ngModel)]="SCD" (change)="FUN1()" >
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Target Tower Cycles</mat-label>
+    <input matInput type="number" [(ngModel)]="TTCY" (change)="FUN1()" >
+  </mat-form-field>
+  <h3>Half Life (Hours)
+    {{HL}}
+  </h3>      
+    
+  <h2>Mass Balance</h2>
+
+  <h3>Evaporation (Gallons/Day)
+    {{ER}}
+</h3>
+  <h3>
+    Blowdown (Gallons/Day)
+    {{BLD}}
+  </h3>
+  <h3>
+    Makeup (Gallons/Day)
+    {{MKP}}
+  </h3>
+  <h3>
+    Makeup Water Cost ($/Day)
+    {{MWC}}
+  </h3>
+  <h3>
+    Evaporation Credit ($/Day)
+    {{ECD}}
+  </h3>
+  <h3>
+    Evaporation (Gallons/Year)	
+    {{EVY}}
+  </h3>
+  <h3>
+    Blowdown (Gallons/Year)	
+    {{BLY}}
+  </h3>
+  <h3>Makeup (Gallons/Year)	
+    {{MKY}}
+</h3>
+<h3>Makeup Water Cost ($/Year)	
+  {{MWCY}}
+</h3>
+<h3>Evaporation Credit ($/Year)	
+  {{ECY}}
+</h3>     
+</div>  
+  
+  
