@@ -38,11 +38,24 @@
       <input matInput type="number" [(ngModel)]="IC" (change)="csWaterLossCost1()">
     </mat-form-field><br>
 
-   <h2 >Form:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LOL}}</h2>
-<h2 >Chemical Density(lb/gal):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{CD}}</h2>
-<h2 >Inhibitor test:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{INHIBT}}</h2>
-<h2 >Inhibitor % Test Active:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ITA}} %</h2>
-
+    <table cellspacing= 20>
+      <tr>
+        <td><h2>Form:</h2></td>
+        <td><h2>{{LOL}}</h2></td>
+      </tr>
+      <tr>
+        <td><h2>Chemical Density(lb/gal):</h2></td>
+        <td><h2>{{CD}}</h2></td>
+      </tr>
+      <tr>
+        <td><h2>Inhibitor test:</h2></td>
+        <td><h2>{{INHIBT}}</h2></td>
+      </tr>
+      <tr>
+        <td><h2>Inhibitor % Test Active:</h2></td>
+        <td><h2>{{ITA}} %</h2></td>
+      </tr>
+    </table>
     <mat-form-field appearance="outline">
       <mat-label>Current Test Level (ppm/ppb)         
       </mat-label>
