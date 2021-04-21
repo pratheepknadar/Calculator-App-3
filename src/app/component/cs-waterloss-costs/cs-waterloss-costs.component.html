@@ -5,25 +5,25 @@
           </b>
   </mat-toolbar><br/>
   
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Calculator Input Type (Regular/ Manual)</mat-label>
     <mat-select >
     <mat-option routerLink="/CSWaterlossCosts" value="v1">Regular Input</mat-option>
     <mat-option routerLink="/CSWaterlossCostsManual"value="v2">Manual Input</mat-option>
     </mat-select>
     </mat-form-field><br>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
       <mat-label>System Designation</mat-label>
       <input matInput type="number"  >
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>System Volume (gal)</mat-label>
       <input matInput type="number" [(ngModel)]="sysVol" (change)="CC()">
     </mat-form-field>
   <h3><b>Closed System Inhibitor</b></h3>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
   <mat-label>Inhibitor Name</mat-label>
   <mat-select [(ngModel)]="CHEM" (selectionChange)="csWaterLossCost1()">
     <mat-option>None</mat-option>
@@ -32,7 +32,7 @@
 </mat-form-field><br/>
 
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Inhibitor Cost ($/lb)
       </mat-label>
       <input matInput type="number" [(ngModel)]="IC" (change)="csWaterLossCost1()">
@@ -43,12 +43,12 @@
 <h2 >Inhibitor test:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{INHIBT}}</h2>
 <h2 >Inhibitor % Test Active:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ITA}} %</h2>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Current Test Level (ppm/ppb)         
       </mat-label>
       <input matInput type="number"  [(ngModel)]="CurrTestL" (change)="csWaterLossCost1()">
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Target Test Level (ppm/ppb)
       </mat-label>
       <input matInput type="number" [(ngModel)]="TTestL" (change)="csWaterLossCost1()">
@@ -68,11 +68,11 @@
 
   <h3><b>Water Cost</b></h3>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
       <mat-label>Water Cost ($/1000 gal)        </mat-label>
       <input matInput type="number" [(ngModel)]="WC" (change)="WaterCost()">
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Sewage Cost ($/1000 gal)
       </mat-label>
       <input matInput type="number"  [(ngModel)] = "SC" (change)="WaterCost()">
@@ -88,7 +88,7 @@
     <mat-datepicker #dt1 color="primary"></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Previous Test Level (ppm)
       </mat-label>
       <input matInput type="number" [(ngModel)]="PTestL" (change)= "WaterCost()">

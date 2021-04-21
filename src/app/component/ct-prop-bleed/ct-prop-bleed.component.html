@@ -3,19 +3,19 @@
         <b>Cooling Tower Proportional to Metered Blowdown (Automatic)
             </b>
     </mat-toolbar><br/>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Calculator Input Type (Regular/ Manual)</mat-label>
       <mat-select >
       <mat-option routerLink="/ct-prop-bleed" value="v1">Regular Input</mat-option>
       <mat-option routerLink="/ct-prop-bleed-manual"value="v2">Manual Input</mat-option>
       </mat-select>
       </mat-form-field><br>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
         <mat-label>Target Tower Cycles:</mat-label>
         <input matInput type="number">
       </mat-form-field>
       <h3><b>Product Data</b></h3>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Product Name</mat-label>
         <mat-select [(ngModel)]="CHEM" (selectionChange)="ProductData()">
           <mat-option>None</mat-option>
@@ -26,7 +26,7 @@
       <h2 >Form:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LOL}}</h2>
       <h2 >Recommended Feed Rate(ppm):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{FR}}</h2>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Product Feed Rate (ppm): </mat-label>
         <input matInput type="number" [(ngModel)]= "PFR"(change)= ProductData() >
       </mat-form-field>
@@ -36,19 +36,19 @@
 <h2>Adjusted Feed Rate (ppm): {{AFR}}</h2>
 
 <h3><b>Feed Pump Settings</b></h3>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Max. Pump Output (GPD): </mat-label>
   <input matInput type="number" [(ngModel)]= "MaxPO" (change)="FPS()">
 </mat-form-field>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>% Speed Setting: </mat-label>
   <input matInput type="number"  [(ngModel)]= "SpeedSetting" (change)="FPS()">
 </mat-form-field>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>% Stroke / Stroke Frequency: </mat-label>
   <input matInput type="number"  [(ngModel)]= "StrokeFreq" (change)="FPS()">
 </mat-form-field>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Max Stroke Frequency</mat-label>
   <input matInput type="number"  [(ngModel)]= "MaxStrokeFreq" (change)="FPS()">
 </mat-form-field>
@@ -56,11 +56,11 @@
 <h2 >Adjusted Pump Output (GPD): {{AdjPO}}</h2>
 
 <h3><b>Controller Settings</b></h3>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Gallon per Contact: </mat-label>
   <input matInput type="number"  [(ngModel)]= "GalPerContact" (change)="CS()">
 </mat-form-field>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Contact Counter</mat-label>
   <input matInput type="number"  [(ngModel)]= "ContactCounter" (change)="CS()">
 </mat-form-field>

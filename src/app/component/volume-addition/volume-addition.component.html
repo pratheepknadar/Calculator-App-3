@@ -1,7 +1,7 @@
 <div class ='inputdata'>
   <h1><b>System Volume Estimate by Addition (Regular)</b></h1>
   
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline">
     <mat-label>Calculator Input (Regular/ Manual)</mat-label>
     <mat-select>
     <mat-option routerLink="/VolumebyAddition" value="v1">Regular Input</mat-option>
@@ -9,12 +9,12 @@
     </mat-select>
     </mat-form-field><br><br>
 
- <mat-form-field appearance="fill">
+ <mat-form-field appearance="outline">
   <mat-label>System Designation</mat-label>
   <input matInput >
 </mat-form-field><br/>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Chemical</mat-label>
   <mat-select [(ngModel)]="CHEM" (selectionChange)="ChemAdd1()">
     <mat-option>None</mat-option>
@@ -27,23 +27,23 @@
 <h2 >Inhibitor test:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{INHIBT}}</h2>
 <h2 >Inhibitor % Test Active:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ITA}} %</h2>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Initial Test Residual(ppm/ppb) </mat-label>
   <input matInput [(ngModel)]="ITR" (change)="ChemAdd1()">
 </mat-form-field><br/>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Solid Chemical Addition(lb) </mat-label>
   <input matInput [(ngModel)]="SCA" (change)="ChemAdd1()">
 </mat-form-field><br/>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Liquid Chemical Addition(gal)</mat-label>
   <input matInput [(ngModel)]="LCA" (change)="ChemAdd1()">
 </mat-form-field><br/>
 
 <h2>Chemical Addition(lb) : {{chemAddition}}  </h2>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Final Test Residual (ppm/ppb) </mat-label>
   <input matInput [(ngModel)]="FINTR" (change)="ChemAdd1()"> 
 </mat-form-field><br/>
