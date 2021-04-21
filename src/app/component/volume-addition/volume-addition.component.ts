@@ -102,15 +102,15 @@ var selected = this.productsList.find(list => list.AN ==  this.CHEM);
 this.LOL = selected.Form;
 this.CD = Number(selected.Density);
 this.INHIBT = selected.Test;
-this.ITA = Number(selected.TA);
+this.ITA = Number(Number(selected.TA).toFixed(2));
 
 if(this.LOL){
   switch (this.LOL) {
     case "Liquid":
-    this.chemAddition = Math.round(Number(this.LCA)*Number(this.CD));
+    this.chemAddition = Number(Math.abs(Number(this.LCA)*Number(this.CD)).toFixed(1));
       break;
   case "Solid":
-    this.chemAddition = Math.round(Number(this.SCA));
+    this.chemAddition = Math.abs(Number(this.SCA));
     break;
     default:
       break;
@@ -120,11 +120,10 @@ if(this.LOL){
 if(this.INHIBT){
   switch (this.INHIBT) {
     case "PTSA":
-      this.SystemVolume = Math.round(Number(this.chemAddition)*120000*Number(this.ITA/100))/((Number(this.FINTR)-Number(this.ITR))/1000);
-      break;
-  
+      this.SystemVolume = Number((Math.abs(Number(this.chemAddition)*120000*(Number(this.ITA)/100))/((Number(this.FINTR)-Number(this.ITR))/1000)).toFixed(2));
+      break;  
     default:
-     this.SystemVolume = Math.round((this.chemAddition)*120000*Number(this.ITA/100))/(Number(this.FINTR)-Number(this.ITR));
+     this.SystemVolume = Number((Math.abs((this.chemAddition)*120000*(Number(this.ITA)/100))/(Number(this.FINTR)-Number(this.ITR))).toFixed(2)); 
       break;
 
   }

@@ -41,7 +41,7 @@ export class ChemDosageComponent implements OnInit {
         default:
           this.CDIT1 = Math.round(Number(this.CDTTL) / (Number(this.CDITA) / 100));
           this.CDIT2 = Math.round((Number(this.CDTTL) - Number(this.CDCTL)) / (Number(this.CDITA) / 100));
-          this.CHEMADDF = (Number(this.CDIT2) / 120) * (Number(this.CDSV) / 1000);
+          this.CHEMADDF = Number(((Number(this.CDIT2) / 120) * (Number(this.CDSV) / 1000)).toFixed(2));
 
 
           break;
@@ -53,7 +53,7 @@ export class ChemDosageComponent implements OnInit {
     if (this.LOS) {
       switch (this.LOS) {
         case "o2":
-          this.CHEMADDF2 = Number(this.CHEMADDF) / Number(this.CDCD);
+          this.CHEMADDF2 = Number((Number(this.CHEMADDF) / Number(this.CDCD)).toFixed(2));
 
           break;
 

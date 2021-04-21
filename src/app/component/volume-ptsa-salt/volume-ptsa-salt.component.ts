@@ -29,15 +29,15 @@ export class VolumePTSASaltComponent implements OnInit {
   FCLP:Number;
 
 TPSA(){
-  this.TPSAV=(Number(this.MPA)*28000)/(Number(this.FPL)-Number(this.IPL));
+  this.TPSAV=Math.abs(Math.round(Math.abs(Number(this.MPA)*28000)/Math.abs(Number(this.FPL)-Math.abs(Number(this.IPL)))));
 }
 ADVT(){
-  this.ADVTV=(Number(this.VTA)*100000)/(Number(this.FPLP)-Number(this.IPLP));
+  this.ADVTV=Math.round((Number(this.VTA)*100000)/(Number(this.FPLP)-Number(this.IPLP)));
 }
 LMA(){
-  this.LMAV=(Number(this.LMAL)*19560)/(Number(this.FMLP)-Number(this.IMLP));
+  this.LMAV=Math.round((Number(this.LMAL)*19560)/(Number(this.FMLP)-Number(this.IMLP)));
 }
 ICL(){
-  this.ICLV=(Number(this.LSAA)*72000)/(Number(this.FCLP)-Number(this.ICLP));
+  this.ICLV=Math.round((Number(this.LSAA)*72000)/(Number(this.FCLP)-Number(this.ICLP)));
 }
 }

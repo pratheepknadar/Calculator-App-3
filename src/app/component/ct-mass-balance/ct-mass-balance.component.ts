@@ -56,14 +56,14 @@ ECY: Number;
   this.ER = selected.EvaporationRate;
   this.BLD = Number(this.ER)/(Number(this.TTCY)-1);
   this.MKP =Number(this.ER)+Number(this.BLD);
-  this.HL = (Number(this.SVG)*0.7)/(Number(this.BLD)/Number(this.HPD));
-  this.MWC = Math.round((Number(this.BLD)/1000)*(Number(this.WCD)+Number(this.SCD))+Number(this.WCD)*(Number(this.ER)/1000));
+  this.HL = Number(((Number(this.SVG)*0.7)/(Number(this.BLD)/Number(this.HPD))).toFixed(1));
+  this.MWC = Number(((Number(this.BLD)/1000)*(Number(this.WCD)+Number(this.SCD))+Number(this.WCD)*(Number(this.ER)/1000)).toFixed(2));
   this.ECD = (Number(this.ER)/1000)*Number(this.SCD);
   this.EVY = Number(this.ER)*Number(this.WPYO)*Number(this.DPWO);
   this.BLY = Number(this.BLD)*Number(this.WPYO)*Number(this.DPWO);
   this.MKY = Number(this.MKP)*Number(this.WPYO)*Number(this.DPWO);
-  this.MWCY = Number(this.MWC)*Number(this.WPYO)*Number(this.DPWO);
-  this.ECY = Number(this.ECD)*Number(this.WPYO)*Number(this.DPWO);
+  this.MWCY = Math.round(Number(this.MWC)*Number(this.WPYO)*Number(this.DPWO));
+  this.ECY = Math.round(Number(this.ECD)*Number(this.WPYO)*Number(this.DPWO));
    
 
  }

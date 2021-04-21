@@ -5,15 +5,15 @@
 <h3><b>10% PTSA Solution Addition</b></h3>
 <mat-form-field appearance="fill">
     <mat-label>Initial PTSA Level (ppb)</mat-label>
-    <input matInput type="number" [(ngModel)]="IPL" (change)="TPSA()" >
+    <input matInput type="number" min="0"[(ngModel)]="IPL" (change)="TPSA()" >
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>mL of 10% PTSA Added </mat-label>
-    <input matInput type="number" [(ngModel)]="MPA" (change)="TPSA()" >
+    <input matInput type="number" min="0"[(ngModel)]="MPA" (change)="TPSA()" >
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Final PTSA Level (ppb)</mat-label>
-    <input matInput type="number" [(ngModel)]="FPL" (change)="TPSA()" >
+    <input matInput type="number" min="0"[(ngModel)]="FPL" (change)="TPSA()" >
   </mat-form-field>
   <h4>Calculated Volume(Gal) : {{TPSAV}}  </h4>
 

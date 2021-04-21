@@ -139,7 +139,7 @@ WaterCost(){
   const diff = Number(Math.abs(this.date1.getTime() - this.date2.getTime()));
   this.diffDays = Number(Math.ceil(Number(diff) / (1000 * 3600 * 24)));
   this.CWaterLoss = Number(Math.log10(Number(this.PTestL)/Number(this.CurrTestL))*2.303*Number(this.sysVol));
-  this.WaterLossCost = Number(this.CWaterLoss)/Number(this.TC);
+  this.WaterLossCost = (Number(this.CWaterLoss)*Number(this.TC)/1000); 
   this.AEC();
 }
  
