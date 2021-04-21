@@ -1,5 +1,8 @@
 <div class ='inputdata'>
-    <h1><b>System Volume Estimate by Addition (Manual)</b></h1>
+    <mat-toolbar color= "DarkGray" style ="height: 30px;">
+      <b>System Volume Estimate by Addition (Manual) </b>
+  </mat-toolbar><br/>
+    <div class = "location">
     <mat-form-field appearance="outline">
         <mat-label>Calculator Input Type (Regular/ Manual)</mat-label>
         <mat-select >
@@ -41,7 +44,7 @@
   <mat-option value="i3">Other</mat-option>
   <mat-option value="i4">Sodium Nitrate</mat-option>
   </mat-select>
-  </mat-form-field>
+  </mat-form-field><br>
 
 <mat-form-field appearance="outline">
   <mat-label>Inhibitor % Test Active: </mat-label>
@@ -68,4 +71,5 @@
   <input matInput [(ngModel)]="FINTR" (change)="SysVol()">
 </mat-form-field><br/>  
 <h2>Calculated Volume (gal): {{SystemVolume}}</h2>
+</div>
 </div>

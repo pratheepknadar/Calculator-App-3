@@ -1,60 +1,115 @@
-<div class ='inputdata'>
-  <h1><b>System Volume Estimate by Addition (Regular)</b></h1>
-  
-  <mat-form-field appearance="outline">
-    <mat-label>Calculator Input (Regular/ Manual)</mat-label>
-    <mat-select>
-    <mat-option routerLink="/VolumebyAddition" value="v1">Regular Input</mat-option>
-    <mat-option routerLink="/VolumebyAdditionManual"value="v2">Manual Input</mat-option>
-    </mat-select>
-    </mat-form-field><br><br>
-
- <mat-form-field appearance="outline">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume Addition</title>
+</head>
+<body class="back">
+  <div class ='inputdata'>
+    <mat-toolbar style ="height: 30px;">
+    <b>System Volume Estimate by Addition (Automatic)</b>
+  </mat-toolbar>
+  <br>
+    <!-- <div class ="wrapper">
+<div class="one"> -->
+<div class = "location1">
+    <mat-form-field appearance="outline">
+      <mat-label>Calculator Input (Automatic/ Manual)</mat-label>
+      <mat-select>
+      <mat-option routerLink="/VolumebyAddition" value="v1">Regular Input</mat-option>
+      <mat-option routerLink="/VolumebyAdditionManual"value="v2">Manual Input</mat-option>
+      </mat-select></mat-form-field> <br>
+    <!-- </div>
+   
+</div> -->
+<mat-form-field appearance="outline">
   <mat-label>System Designation</mat-label>
   <input matInput >
-</mat-form-field><br/>
+</mat-form-field>
 
-<mat-form-field appearance="outline">
-  <mat-label>Chemical</mat-label>
-  <mat-select [(ngModel)]="CHEM" (selectionChange)="ChemAdd1()">
-    <mat-option>None</mat-option>
-    <mat-option *ngFor = "let item of productsList" [value]="item.AN">{{item.AN}}</mat-option>
-    </mat-select>
-</mat-form-field><br/>
-
-<h2 >Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LOL}}</h2>
-<h2 >Chemical Density(lb/gal):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{CD}}</h2>
-<h2 >Inhibitor test:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{INHIBT}}</h2>
-<h2 >Inhibitor % Test Active:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ITA}} %</h2>
-
-<mat-form-field appearance="outline">
-  <mat-label>Initial Test Residual(ppm/ppb) </mat-label>
-  <input matInput [(ngModel)]="ITR" (change)="ChemAdd1()">
-</mat-form-field><br/>
-
-<mat-form-field appearance="outline">
-  <mat-label>Solid Chemical Addition(lb) </mat-label>
-  <input matInput [(ngModel)]="SCA" (change)="ChemAdd1()">
-</mat-form-field><br/>
-
-<mat-form-field appearance="outline">
-  <mat-label>Liquid Chemical Addition(gal)</mat-label>
-  <input matInput [(ngModel)]="LCA" (change)="ChemAdd1()">
-</mat-form-field><br/>
-
-<h2>Chemical Addition(lb) : {{chemAddition}}  </h2>
-<mat-form-field appearance="outline">
-  <mat-label>Final Test Residual (ppm/ppb) </mat-label>
-  <input matInput [(ngModel)]="FINTR" (change)="ChemAdd1()"> 
-</mat-form-field><br/>
-<h2>Calculated Volume(Gal) : {{SystemVolume}}  </h2>
-
- <p>Note:
   
- 1) Accurately measure volume of chemical addition.
+   <br>
+   <mat-form-field appearance="outline">
+    <mat-label>Chemical</mat-label>
+    <mat-select [(ngModel)]="CHEM" (selectionChange)="ChemAdd1()">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor = "let item of productsList" [value]="item.AN">{{item.AN}}</mat-option>
+      </mat-select>
+  </mat-form-field>
+
+
+  <table cellspacing= 20>
+    <tr>
+      <td><h2>Form:</h2></td>
+      <td><h2>{{LOL}}</h2></td>
+    </tr>
+    <tr>
+      <td><h2>Chemical Density(lb/gal):</h2></td>
+      <td><h2>{{CD}}</h2></td>
+    </tr>
+    <tr>
+      <td><h2>Inhibitor test:</h2></td>
+      <td><h2>{{INHIBT}}</h2></td>
+    </tr>
+    <tr>
+      <td><h2>Inhibitor % Test Active:</h2></td>
+      <td><h2>{{ITA}} %</h2></td>
+    </tr>
+  </table>
+</div>
+  <hr>
+  <div class = "location2">
+  <mat-form-field appearance="outline">
+    <mat-label>Initial Test Residual(ppm/ppb) </mat-label>
+    <input matInput [(ngModel)]="ITR" (change)="ChemAdd1()">
+  </mat-form-field> <br>
   
- 2) After chemical addition, allow system to circulate until readings stabilize.
+  <mat-form-field appearance="outline">
+    <mat-label>Solid Chemical Addition(lb) </mat-label>
+    <input matInput [(ngModel)]="SCA" (change)="ChemAdd1()">
+  </mat-form-field> <br>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Liquid Chemical Addition(gal)</mat-label>
+    <input matInput [(ngModel)]="LCA" (change)="ChemAdd1()">
+  </mat-form-field><br/>
+  
+  <mat-card class="calculation">
+    <h2> Chemical Addition(lb) : {{chemAddition}} </h2>
+  </mat-card>
+   <br>
  
- 3) Volume measurement will not reflect offline equipment and piping.
- </p>
- </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Final Test Residual (ppm/ppb) </mat-label>
+    <input matInput [(ngModel)]="FINTR" (change)="ChemAdd1()"> 
+  </mat-form-field><br/>
+
+  <mat-card class = "calculation">
+    <h2>Calculated Volume(Gal) : {{SystemVolume}}  </h2>
+  </mat-card>
+   
+ 
+  <br>
+</div>
+ <hr> 
+  <div class = "location3">
+   <mat-card class="note">
+    <mat-card-title>Note:</mat-card-title>
+    <mat-card-content>
+      <p>
+    
+        1) Accurately measure volume of chemical addition.<br>
+         
+        2) After chemical addition, allow system to circulate until readings stabilize. <br>
+        
+        3) Volume measurement will not reflect offline equipment and piping.<br></p>
+    </mat-card-content>
+  </mat-card>
+</div>
+   </div>
+</body>
+</html>
+

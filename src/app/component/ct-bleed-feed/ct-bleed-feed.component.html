@@ -3,6 +3,7 @@
         <b>CT Bleed Feed (automatic)
             </b>
     </mat-toolbar><br/>
+    <div class = "location">
     <mat-form-field appearance="outline">
         <mat-label>Calculator Input Type (Regular/ Manual)</mat-label>
         <mat-select >
@@ -24,7 +25,7 @@
     <mat-form-field appearance="outline">
       <mat-label>Product Feed Rate (ppmb): </mat-label>
       <input matInput type="number" [(ngModel)]= "PFR"(change)= ProductData() >
-    </mat-form-field>
+    </mat-form-field><br>
 
     <h2 >Product Density(lb/gal):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{CD}}</h2>
 <h2 >Feed Solution Strength:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{strength}}%</h2>
@@ -34,19 +35,19 @@
 <mat-form-field appearance="outline">
 <mat-label>Max. Pump Output (GPD): </mat-label>
 <input matInput type="number" [(ngModel)]= "MaxPO" (change)="FPS()">
-</mat-form-field>
+</mat-form-field><br>
 <mat-form-field appearance="outline">
 <mat-label>% Speed Setting: </mat-label>
 <input matInput type="number"  [(ngModel)]= "SpeedSetting" (change)="FPS()">
-</mat-form-field>
+</mat-form-field><br>
 <mat-form-field appearance="outline">
 <mat-label>% Stroke / Stroke Frequency: </mat-label>
 <input matInput type="number"  [(ngModel)]= "StrokeFreq" (change)="FPS()">
-</mat-form-field>
+</mat-form-field><br>
 <mat-form-field appearance="outline">
 <mat-label>Max Stroke Frequency</mat-label>
 <input matInput type="number"  [(ngModel)]= "MaxStrokeFreq" (change)="FPS()">
-</mat-form-field>
+</mat-form-field><br>
 
 <h2 >Adjusted Pump Output (GPD): {{AdjPO}}</h2>
 <h3><b>Controller Settings</b></h3>
@@ -55,7 +56,7 @@
 <mat-form-field appearance="outline">
     <mat-label>Bleed Line Flow Rate (GPM)*</mat-label>
     <input matInput type="number"  [(ngModel)]= "BLFR1" (change)="CS()">
-    </mat-form-field>
+    </mat-form-field><br>
     <h2 >% Post Bleed Time: {{PBT}}</h2>
 
     <h3><b>Bleed & Feed Settings - Limit Timer</b></h3>
@@ -63,7 +64,7 @@
 <mat-form-field appearance="outline">
     <mat-label>Bleed Line Flow Rate (GPM)*</mat-label>
     <input matInput type="number"  [(ngModel)]= "BLFR2" (change)="CS1()">
-    </mat-form-field>
+    </mat-form-field><br>
     <h2 >% Max Pump Output: {{MPO}}</h2>
-
+</div>
 </div>

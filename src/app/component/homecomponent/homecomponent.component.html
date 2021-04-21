@@ -1,11 +1,73 @@
 <div class="new">
-  <br/>
- <h1>&nbsp;&nbsp;&nbsp;Service Calculations </h1><br/>
-  <button mat-raised-button routerLink="/VolumePage" color="primary">Volume Calculations</button><br/><br/>
-  <button mat-raised-button routerLink="/cs-page" color="primary">Closed Systems</button><br/><br/>
-  <button mat-raised-button routerLink="/chemDosage" color="primary">Chemical Dosage</button><br/><br/>
-  <button mat-raised-button routerLink="/ct-page"color="primary"> Cooling Tower </button><br/><br/>
+  <mat-toolbar style ="height: 30px;">
+    <b>Service Calculations</b>
+  </mat-toolbar>
+  <br>
+<!-- <button mat-raised-button routerLink="/VolumePage" color="primary"></button><br/><br/>
+  <button mat-raised-button routerLink="/cs-page" color="primary"></button><br/><br/>
+  <button mat-raised-button routerLink="/chemDosage" color="primary"></button><br/><br/>
+  <button mat-raised-button routerLink="/ct-page"color="primary"></button><br/><br/> -->
+
+  <table cellspacing = 10>
+    <th><h2><b>Volume Calculations</b></h2></th>
+    <th><h2><b>Closed Systems</b></h2></th>
+    <th><h2><b>Cooling Tower</b></h2></th>
+    <th><h2><b>Chemical Dosage</b></h2></th>
+    <tr>
+<td><button mat-raised-button routerLink="/VolumebyAddition" color="primary">System Volume by Chemical Addition</button></td>
+<td> <button mat-raised-button routerLink="/CSWaterLoss" color="primary">Closed System-Water loss by Depletion</button></td>
+<td> <button mat-raised-button routerLink="/lsi-mass"color="primary">CT - LSI </button></td>
+  <td><button mat-raised-button routerLink="/chemDosage" color="primary">Chem Dosage</button></td>
+    </tr>
+<tr>
+    <td><button mat-raised-button routerLink="/VolumebyPTSA" color="primary">System Volume by PTSA, Mo Salt</button></td>
+    <td><button mat-raised-button routerLink="/CSWaterlossCosts" color="primary">Closed System - Water loss Cost </button></td>
+    <td> <button mat-raised-button routerLink="/lsi-mass"color="primary">CT - LSI </button></td>
+  </tr>
+   <tr>
+     <td>
+      <button mat-raised-button routerLink="/VolumebyDimension" color="primary">System Volume by Dimensions</button>
+     </td>
+     <td></td>
+     <td> <button mat-raised-button routerLink="/ct-mass-balance" color="primary">CT Mass Balance</button></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td></td>
+     <td><button mat-raised-button routerLink="/ct-bio" color="primary">CT - Biocide </button></td>
+   </tr>
+   <tr>
+    <td></td>
+    <td></td>
+    <td> <button mat-raised-button routerLink="/ct-prop" color="primary">CT - Proportional Metered Makeup</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><button mat-raised-button routerLink="/ct-bleed" color="primary">CT - Proportional Metered blowdown</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td> <button mat-raised-button routerLink="/ct-timer" color="primary">CT % Timer</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><button mat-raised-button routerLink="/ct-bleed-feed" color="primary">CT - Bleed and Feed settins</button></td>
+  </tr>
+  </table>
+
+ <br/><br/>
+ 
   
+ 
+  
+ 
+  
+ 
+ 
+ <br/><br/>
 
 
 

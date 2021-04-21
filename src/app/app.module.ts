@@ -46,7 +46,7 @@ import { CtPropMakeupManualComponent } from './component/ct-prop-makeup-manual/c
 import { CtTimerManualComponent } from './component/ct-timer-manual/ct-timer-manual.component';
 import { CtPropBleedManualComponent } from './component/ct-prop-bleed-manual/ct-prop-bleed-manual.component';
 import { CtBleedFeedManualComponent } from './component/ct-bleed-feed-manual/ct-bleed-feed-manual.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -100,7 +100,8 @@ import { CtBleedFeedManualComponent } from './component/ct-bleed-feed-manual/ct-
     MatFormFieldModule,
     FormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

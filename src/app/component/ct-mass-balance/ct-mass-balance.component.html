@@ -1,6 +1,10 @@
 <div class= "inputdata">
-<h2><b>Mass Balance</b> </h2>
-<h4>System Data</h4>
+<mat-toolbar color= "DarkGray" style ="height: 30px;">
+  <b>Mass Balance
+      </b>
+</mat-toolbar><br/>
+<div class = "location" >
+  <h4><b>System Data</b></h4>
     <mat-form-field appearance="outline">
       <mat-label>Cooling System Type</mat-label>
       <mat-select [(ngModel)]="CST" (selectionChange)="FUN1()">
@@ -11,43 +15,43 @@
   <mat-form-field appearance="outline">
     <mat-label>{{sType}}   </mat-label>
     <input matInput type="number" [(ngModel)]="RR" (change)="FUN1()" >
-  </mat-form-field> 
+  </mat-form-field> <br>
 
   <mat-form-field appearance="outline">
     <mat-label>{{LFactor}}   </mat-label>
     <input matInput type="number" [(ngModel)]="ADT" (change)="FUN1()" >
-  </mat-form-field> 
+  </mat-form-field> <br>
 
   <mat-form-field appearance="outline">
     <mat-label>Hours per Day Operation    </mat-label>
     <input matInput type="number" [(ngModel)]="HPD" (change)="FUN1()" >
-  </mat-form-field> 
+  </mat-form-field> <br>
 
   <mat-form-field appearance="outline">
     <mat-label>Days per Week Operation    </mat-label>
     <input matInput type="number" [(ngModel)]="DPWO" (change)="FUN1()" >
-  </mat-form-field> 
+  </mat-form-field> <br>
   
   <mat-form-field appearance="outline">
     <mat-label>Weeks per Year Operation    </mat-label>
     <input matInput type="number" [(ngModel)]="WPYO" (change)="FUN1()" >
-  </mat-form-field>   
+  </mat-form-field>   <br>
   <mat-form-field appearance="outline">
     <mat-label>System Volume(Gal)  </mat-label>
     <input matInput type="number" [(ngModel)]="SVG" (change)="FUN1()" >
-  </mat-form-field>
+  </mat-form-field><br>
   <mat-form-field appearance="outline">
     <mat-label>Water  Cost ($/1000 Gal)    </mat-label>
     <input matInput type="number" [(ngModel)]="WCD" (change)="FUN1()" >
-  </mat-form-field>   
+  </mat-form-field>   <br>
   <mat-form-field appearance="outline">
     <mat-label>Sewer Cost ($/1000 Gal)</mat-label>
     <input matInput type="number" [(ngModel)]="SCD" (change)="FUN1()" >
-  </mat-form-field> 
+  </mat-form-field> <br>
   <mat-form-field appearance="outline">
     <mat-label>Target Tower Cycles</mat-label>
     <input matInput type="number" [(ngModel)]="TTCY" (change)="FUN1()" >
-  </mat-form-field>
+  </mat-form-field><br>
   <h3>Half Life (Hours):  <b>{{HL}}</b>
   </h3>      
     
@@ -80,5 +84,6 @@
 <h3>Evaporation Credit ($/Year):  <b>{{ECY}}</b>
 </h3>     
 </div>  
+</div>
   
   
